@@ -1,10 +1,10 @@
-# Code Challenge: NextJS
+# Maybe Full Stack Code Challenge
+
+Details: https://company.maybe.co/b32696ab48f44761aa138dcfead7f099
 
 This is a simple app to lookup airport information.
 
-
-
-## Getting Started
+## Getting Started
 
 The app is designed to work out of the box with no external dependencies, other than node modules.
 
