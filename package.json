@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest"
+    "test": "jest",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -26,6 +27,7 @@
     "@types/react": "^17.0.2",
     "autoprefixer": "^10.2.4",
     "babel-jest": "^27.0.6",
+    "cypress": "^8.1.0",
     "jest": "^27.0.6",
     "node-mocks-http": "^1.10.1",
     "postcss": "^8.2.6",
