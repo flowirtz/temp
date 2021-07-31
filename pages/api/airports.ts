@@ -1,9 +1,9 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse } from "next";
 
-import { allAirports } from '../../models/airport'
+import { allAirports } from "../../models/airport";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const airports = await allAirports()
+  const airports = await allAirports();
 
-  res.status(200).json(airports)
-}
+  res.status(200).json(airports);
+};

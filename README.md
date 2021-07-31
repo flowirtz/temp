@@ -12,7 +12,6 @@ The app is designed to work out of the box with no external dependencies, other 
 yarn install
 ```
 
-
 ## Running locally
 
 ```shell
@@ -20,8 +19,6 @@ yarn dev
 ```
 
 Once started, the app should be available via http://localhost:3000
-
-
 
 ## Help
 
