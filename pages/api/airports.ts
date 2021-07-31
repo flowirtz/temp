@@ -9,10 +9,9 @@ interface AirportsApiRequest extends NextApiRequest {
   };
 }
 
-
 export default async (req: AirportsApiRequest, res: NextApiResponse) => {
   // GET /api/airports
-  if(!req.query.q) {
+  if (!req.query.q) {
     const airports = await allAirports();
     return res.status(200).json(airports);
   }
