@@ -1,9 +1,23 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { allAirports } from "../../models/airport";
+import { allAirports, fetchFilteredAirports } from "../../models/airport";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const airports = await allAirports();
+interface AirportsApiRequest extends NextApiRequest {
+  query: {
+    q?: string;
+    [key: string]: string | string[];
+  };
+}
 
-  res.status(200).json(airports);
+
+export default async (req: AirportsApiRequest, res: NextApiResponse) => {
+  // GET /api/airports
+  if(!req.query.q) {
+    const airports = await allAirports();
+    return res.status(200).json(airports);
+  }
+
+  // GET /api/airports?q=London
+  const filteredAirports = await fetchFilteredAirports(req.query.q);
+  return res.status(200).json(filteredAirports);
 };
